@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv sh
+
+exec /usr/local/bin/opentracker -f /etc/opentracker/opentracker.conf

@@ -1,0 +1,20 @@
+
+version: "2.1"
+
+services:
+  opentracker:
+    build:
+      context: opentracker
+    image: opentracker:latest
+    ports: 
+      - 6969:6969
+
+  godaddy-ddns:
+    image: peteward44/godaddy-ddns
+    environment: 
+      GODADDY_KEY: $GODADDY_KEY
+      GODADDY_SECRET: $GODADDY_SECRET
+      GODADDY_DOMAIN: $GODADDY_DOMAIN
+      GODADDY_TYPE: $GODADDY_TYPE
+      GODADDY_NAME: $GODADDY_NAME
+      
